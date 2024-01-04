@@ -18,7 +18,7 @@ Dans notre cas nous scannons notre réseau car nous somme en local, nous identif
 
 ---------------------------------------------------------------------------------------------
 ## STEP 2
-### Ettercap, spoofing
+### Attaque Man In The Middle
 
 **Explication** : Nous allons faire une attaque MITM, concistant à espoinner le réseau, et voir les paquets important qui y passe, notamment les user:password etc...
 
@@ -30,7 +30,7 @@ Dans notre cas nous scannons notre réseau car nous somme en local, nous identif
 
 ---------------------------------------------------------------------------------------------
 ## STEP 3
-### DDOS
+### Attaque DDOS avec Slowloris
 
 **Explication** : Nous allons pour cette fois DDOS le serveur, avec un tool appelé Slowloris, qui va envoyer un multitide de paquets, afin de faire déborder le serveur qui va ensuite crasher. (dans notre cas nous avions une session mais la page ne se recharge plus)
 
@@ -40,7 +40,7 @@ Dans notre cas nous scannons notre réseau car nous somme en local, nous identif
 
 ---------------------------------------------------------------------------------------------
 ## STEP 4
-### Hydra Brute Force
+### Attaque brute force avec Hydra
 
 **Explication** : Pour finir, avec un test encore une fois très basique, Hydra, qui va tester chaque possibilités d'une liste que nous lui donnons, afin qu'il les testes et trouve le mot de passe / nom d'utilisateur cherché.
 
