@@ -2,7 +2,7 @@
 
 ---------------------------------------------------------------------------------------------
 ## STEP 1
-### Confgue TrueNAS, finalisation
+### Installation du serveur
 
 **Explication** : Nous allons donc créer et configuré un serveur truenas depuis son iso, avec une configuration normal, afin d'obtenir son ip de connection, pour en arriver jusque la : 
 
@@ -10,7 +10,7 @@
 
 ---------------------------------------------------------------------------------------------
 ## STEP 2
-### Acces Login au TrueNAS
+### Acces à l'administration Web
 
 **Explication** : Nous allons donc pouvoir nous connecter sur un navigateur avec `http://192.168.73.129/` nous amenant à la page de connection, dans laquel nous entrons root:root (Reset passwd root avec 7 dans le terminal si il est oublié)
 
@@ -18,7 +18,7 @@
 
 ---------------------------------------------------------------------------------------------
 ## STEP 3
-### Ajout des disques
+### Ajout des disques de stockage
 
 **Explication** : Nous allons créer et ajouter un disque sur VMware pour truenas afin de débuter le Raid Miroir, car il est nécessaire d'avoir plusieurs disques (si l'un est perdu, l'autre peut-donc prendre la relève), il existe plusieurs type de Raid mais nous allons rester sur celui-ci.
 
@@ -26,7 +26,7 @@
 
 ---------------------------------------------------------------------------------------------
 ## STEP 4
-### Création Pool, Dataset + Permission, ACL
+### Créer un pool avec RAID miroir
 
 **Explication** : Création d'un pool via TrueNas avec les différentes configurations à faire (permission, DataSet, Groupe, ACL etc...)
 
@@ -54,7 +54,7 @@ Spécification des groupes qui auront leur permission particulière, dans notre 
 
 ---------------------------------------------------------------------------------------------
 ## STEP 5
-### acces par NFS / SMB
+### Partager le stockage réseau en SMB / NFS
 
 **Explication** : Nous allons faire un partage de dossier à distance, tout comme le fais windows en NFS, nous allons le faire en SMB sur kali (problème windows), en commencant par la création d'utilisateur, puis l'ajout des dossiers et enfin la connection aux dossiers.
 
@@ -86,7 +86,7 @@ Configuration du domain pour l'AD :
 
 ---------------------------------------------------------------------------------------------
 ## STEP 6
-### 
+### Connecter le TrueNAS au VPN wireguard
 
 **Explication** : Installer wireguard, specifier une commande qui créer un fichier .conf et qui l'active automatiquement pour activer le vpn (visible avec ifconfig) ensuite)
 
