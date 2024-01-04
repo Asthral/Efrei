@@ -4,7 +4,7 @@
 ## STEP 1
 ### Installation du serveur
 
-**Explication** : Nous allons donc créer et configuré un serveur truenas depuis son iso, avec une configuration normal, afin d'obtenir son ip de connection, pour en arriver jusque la : 
+**Explication** : Nous allons donc créer et configurer un serveur truenas depuis son iso, avec une configuration normal, afin d'obtenir son ip de connection, pour en arriver jusque la : 
 
 ![TrueNAS_1_FinishConfigue](https://github.com/Asthral/Efrei/assets/151788916/6c991957-1eb5-4909-8a85-e38ce0d420c2)
 
@@ -12,7 +12,7 @@
 ## STEP 2
 ### Acces à l'administration Web
 
-**Explication** : Nous allons donc pouvoir nous connecter sur un navigateur avec `http://192.168.73.129/` nous amenant à la page de connection, dans laquel nous entrons root:root (Reset passwd root avec 7 dans le terminal si il est oublié)
+**Explication** : Nous allons donc pouvoir nous connecter sur un navigateur avec `http://192.168.73.129/` nous amenant à la page de connexion, dans laquel nous entrons root:root (Reset passwd root avec 7 dans le terminal si il est oublié)
 
 ![TrueNAS_2_AccesLogin](https://github.com/Asthral/Efrei/assets/151788916/5a46768e-5ad3-4fd1-a36a-1a5b1b2dc84f)
 
@@ -56,7 +56,7 @@ Spécification des groupes qui auront leur permission particulière, dans notre 
 ## STEP 5
 ### Partager le stockage réseau en SMB / NFS
 
-**Explication** : Nous allons faire un partage de dossier à distance, tout comme le fais windows en NFS, nous allons le faire en SMB sur kali (problème windows), en commencant par la création d'utilisateur, puis l'ajout des dossiers et enfin la connection aux dossiers.
+**Explication** : Nous allons faire un partage de dossier à distance, tout comme le fais windows en NFS, nous allons le faire en SMB sur kali (problème windows), en commencant par la création d'utilisateur, puis l'ajout des dossiers et enfin la connexion aux dossiers.
 
 Ajouts des utilisateurs pouvans se connecter : 
 
@@ -72,7 +72,7 @@ Sur kali :
 
 ![TrueNAS_Devinette](https://github.com/Asthral/Efrei/assets/151788916/ce04f941-0512-4115-8acb-4732b65ae4a1)
 
-Nous pouvons créer ajouter changer des dossiers / fichiers depuis l'utilisateur erwan créé précédemment, pour accedé entre autre à son espace de stockage privée.
+Nous pouvons créer ajouter changer des dossiers / fichiers depuis l'utilisateur erwan créé précédemment, pour acceder, entre autre à son espace de stockage privée.
 
 ### AD
 
