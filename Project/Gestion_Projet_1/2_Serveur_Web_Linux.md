@@ -83,7 +83,16 @@ Ou
 ![User](https://github.com/Asthral/Efrei/assets/151788916/e47676ab-099b-4ee1-b6f1-4ab802ac9b0e)
 
 ---------------------------------------------------------------------------------------------
-## STEP 1
+## STEP 6
 ### Monter le stockage du NAS en NFS
 
+**Explication** : Nous allons installer l'outil afin de créer un dossier qui soit accessible par NFS.
+
+**Commande** : `apt install nfs-kernel-server`
+
+**Commande** : `mkdir /var/nfs/general -p`
+
+**Commande** : `chown nobody:nogroup /var/nfs/general`
+
+![image](https://github.com/Asthral/Efrei/assets/151788916/3e85843f-ea19-4404-b3c5-c0391ccdbe96)
 
