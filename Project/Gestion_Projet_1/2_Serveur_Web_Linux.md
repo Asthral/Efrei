@@ -78,6 +78,10 @@ Ou
 ## STEP 5
 ### Création des accès utilisateurs
 
+**Explication** : Nous créons donc un groupe appelé "Efrei" ainsi que des utilisateurs avec des mots de passe, qui auront un espace de stockage attribué.
+
+![User](https://github.com/Asthral/Efrei/assets/151788916/e47676ab-099b-4ee1-b6f1-4ab802ac9b0e)
+
 ---------------------------------------------------------------------------------------------
 ## STEP 1
 ### Monter le stockage du NAS en NFS
