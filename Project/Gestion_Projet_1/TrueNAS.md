@@ -39,11 +39,11 @@ Création des DataSet :
 
 ![TrueNAS_4_AddDataSet](https://github.com/Asthral/Efrei/assets/151788916/fe4dc794-0c62-48df-acba-7e6257827352)
 
-Gestion des permissions :
+Gestion des permissions ACL 1 :
 
 ![TrueNAS_4_ACLPermission](https://github.com/Asthral/Efrei/assets/151788916/9e3f98f6-0e52-4971-b883-6dfc9e18432e)
 
-Gestion de permissions ACL :
+Gestion de permissions ACL 2 :
 
 ![TrueNAS_4_ConfiguePermissionACL](https://github.com/Asthral/Efrei/assets/151788916/5515ee22-d0b9-471b-a889-63d22aec1bd0)
 
@@ -53,29 +53,39 @@ Gestion de permissions ACL :
 
 ---------------------------------------------------------------------------------------------
 ## STEP 5
+### acces par NFS / SMB
 
-**Explication** : Nous allons donc créer et configuré un serveur truenas depuis son iso, avec une configuration normal, pour en arriver jusque la : 
+**Explication** : Nous allons faire un partage de dossier à distance, tout comme le fais windows en NFS, nous allons le faire en SMB sur kali (problème windows), en commencant par la création d'utilisateur, puis l'ajout des dossiers et enfin la connection aux dossiers.
+
+Add User : 
+
+![TrueNAS_5_CreateUser](https://github.com/Asthral/Efrei/assets/151788916/7bc436be-88d8-4aff-90e9-e3a2cd0d9727)
+
+ajout de fichier accessible par SMB : 
+
+![TrueNAS_5_SMBAdd](https://github.com/Asthral/Efrei/assets/151788916/31bac52e-f5ec-4195-9770-ed50e86df15a)
+
+**Command** : `smbclient` //ip/repertoir -U utilisateur
+
+Sur kali : 
+
+![TrueNAS_Devinette](https://github.com/Asthral/Efrei/assets/151788916/607f3585-7244-4e7f-9925-96cbafd19661)
+
+Nous pouvons créer ajouter changer des dossiers / fichiers depuis l'utilisateur erwan créé précédemment
+
+### AD
+
+**Explication** : Configuration global du réseau de notre serveurde stockage
+
+![TrueNAS_5_ChangeConfigueNetWork](https://github.com/Asthral/Efrei/assets/151788916/e4e0be20-208a-4b69-aed8-1d82eb290888)
+
+Configuration de l'AD :
+
+![TrueNAS_5_ADConfigue](https://github.com/Asthral/Efrei/assets/151788916/79c4791f-9b15-47bd-be20-c7c9a8b6a542)
 
 ---------------------------------------------------------------------------------------------
-## STEP 1
-
-**Explication** : Nous allons donc créer et configuré un serveur truenas depuis son iso, avec une configuration normal, pour en arriver jusque la : 
-
----------------------------------------------------------------------------------------------
-## STEP 1
-
-**Explication** : Nous allons donc créer et configuré un serveur truenas depuis son iso, avec une configuration normal, pour en arriver jusque la : 
-
----------------------------------------------------------------------------------------------
-## STEP 1
-
-**Explication** : Nous allons donc créer et configuré un serveur truenas depuis son iso, avec une configuration normal, pour en arriver jusque la : 
+## STEP 6
+### 
 
 
-
-
-
-
-
-
-
+**Explication** :
