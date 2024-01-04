@@ -9,6 +9,6 @@ les noms des fichiers sont les titres de chaque partie du tableau : [MindMap-PRO
 les sous partie de tableau sont organisés ainsi :
 
 ---------------------------------------------------------------
-`Step "number"` 
+`Step "nombre"` 
 
-`"Sous partie"`
+`"Nom sous partie"`
