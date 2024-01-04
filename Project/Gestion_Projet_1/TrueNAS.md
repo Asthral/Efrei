@@ -91,11 +91,11 @@ Configuration du domain pour l'AD :
 
 **Explication** : Installer wireguard, specifier une commande qui créer un fichier .conf et qui l'active automatiquement pour activer le vpn (visible avec ifconfig) ensuite)
 
-Commmande wireguard configue sur le truenas :
+Commmande wireguard à configue pour le truenas :
 
 ![TrueNAS_6_WireguardAutoCommande](https://github.com/Asthral/Efrei/assets/151788916/c5654df3-7544-457c-b88c-6f54e49308e8)
 
-visibilité du vpn (problème d'activation donc je l'ai fais manuellement) :
+vpn isible par terminal Kali (problème d'activation sur TrueNAS, je l'ai fais manuellement) :
 
 ![TrueNAS_6_wireguardfinaly](https://github.com/Asthral/Efrei/assets/151788916/256579da-d1a2-4e90-a272-a7ab77e97fe3)
 
