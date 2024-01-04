@@ -68,6 +68,12 @@ En commençant pas installer tout le nécessaire :
 
 ![Debian_4_SSLKeyCreate](https://github.com/Asthral/Efrei/assets/151788916/b52a787a-f221-4dee-8995-43615b602f6a)
 
+Ou
+
+**Explication** : Utilisation de CertBot pour créer la clé, mais cela demande un nom de domain, et l'autre option est faisable sur nginx or je suis sur apache2, je ne ferai donc pas le passage en https.
+
+![Debian_4_CertBot](https://github.com/Asthral/Efrei/assets/151788916/d1806123-71ff-4c6d-a2db-79c4be471b11)
+
 ---------------------------------------------------------------------------------------------
 ## STEP 5
 ### Installation du serveur
