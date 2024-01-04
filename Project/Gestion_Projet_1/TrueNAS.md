@@ -79,7 +79,7 @@ Nous pouvons créer ajouter changer des dossiers / fichiers depuis l'utilisateur
 
 ![TrueNAS_5_ChangeConfigueNetWork](https://github.com/Asthral/Efrei/assets/151788916/e4e0be20-208a-4b69-aed8-1d82eb290888)
 
-Configuration de l'AD :
+Configuration du domain pour l'AD :
 
 ![TrueNAS_5_ADConfigue](https://github.com/Asthral/Efrei/assets/151788916/79c4791f-9b15-47bd-be20-c7c9a8b6a542)
 
@@ -87,5 +87,14 @@ Configuration de l'AD :
 ## STEP 6
 ### 
 
+**Explication** : Installer wireguard, specifier une commande qui créer un fichier .conf et qui l'active automatiquement pour activer le vpn (visible avec ifconfig) ensuite)
 
-**Explication** :
+Commmande wireguard configue sur le truenas :
+
+![TrueNAS_6_WireguardAutoCommande](https://github.com/Asthral/Efrei/assets/151788916/c5654df3-7544-457c-b88c-6f54e49308e8)
+
+visibilité du vpn (problème d'activation donc je l'ai fais manuellement) :
+
+![TrueNAS_6_wireguardfinaly](https://github.com/Asthral/Efrei/assets/151788916/256579da-d1a2-4e90-a272-a7ab77e97fe3)
+
+
