@@ -40,10 +40,12 @@ Création des DataSet (chaque utilisateur), j'ai pris les noms de mes camarades 
 ![TrueNAS_4_AddDataSet](https://github.com/Asthral/Efrei/assets/151788916/fe4dc794-0c62-48df-acba-7e6257827352)
 
 Gestion des permissions ACL 1 :
+Qui à quoi comment permission, et de quel type. 
 
 ![TrueNAS_4_ACLPermission](https://github.com/Asthral/Efrei/assets/151788916/9e3f98f6-0e52-4971-b883-6dfc9e18432e)
 
-Gestion de permissions ACL 2 :
+Gestion des permissions ACL 2 :
+Spécification des groupes qui auront leur permission particulière, dans notre cas il y aura le groupe utilisateur et le groupe admin.
 
 ![TrueNAS_4_ConfiguePermissionACL](https://github.com/Asthral/Efrei/assets/151788916/5515ee22-d0b9-471b-a889-63d22aec1bd0)
 
