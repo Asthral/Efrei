@@ -4,7 +4,27 @@
 ## STEP 1
 ### Installation du serveur
 
-**Explication** : Nous allons télécharger une iso de debian 11, et configurer notre VM, afin de pouvoir configurer le serveur, et pouvoir le lancer.
+**Explication** : Nous allons télécharger une iso de debian 11, et configurer notre VM, afin de pouvoir configurer le serveur, et pouvoir le lancer
+
+---------------------------------------------------------------------------------------------
+## STEP 2
+### Accès sécurisé avec ssh
+
+**Explication** : Nous allons installer Openssh puis nous connecter au serveur debian par ssh
+
+/!\ suite au DDOS du serveur je ne peux plus me connecter depuis Kali, je l'ai donc fais depuis mon serveur TrueNAS
+
+**Commande** : `pkg install openssh-server`
+
+**Explication** : Nous allons maintenant pouvoir nous connecter. Pour être sur vous pouvez faire `systemctl status ssh` pour être sur qu'il soit actif.
+
+**Commande** : `ssh astral@192.168.73.133`
+
+![TrueNAS_ConnectDebianSSH](https://github.com/Asthral/Efrei/assets/151788916/b1c18bde-6203-4c46-acee-dfc615f54ace)
+
+---------------------------------------------------------------------------------------------
+## STEP 3
+### Installer l'application web
 
 En commençant pas installer tout le nécessaire :
 
@@ -28,13 +48,11 @@ En commençant pas installer tout le nécessaire :
 
 **Commande** : `chown -R www-data:www-data /var/www/html/nextcloud/` 
 
----------------------------------------------------------------------------------------------
-## STEP 2
-### Accès sécurisé avec ssh
+**Explication** : En entrant http://ip/nextcloud nous avons accès au serveur web :
 
----------------------------------------------------------------------------------------------
-## STEP 3
-### Installer l'application web
+![Debian_3_RootConnexion](https://github.com/Asthral/Efrei/assets/151788916/376a22b1-68c0-43b3-af0a-48dd1e48cdc2)
+
+![Debian_3_ConnectéRoot](https://github.com/Asthral/Efrei/assets/151788916/6fbd2bac-62f4-40f4-ae1b-b29f3e14fffc)
 
 ---------------------------------------------------------------------------------------------
 ## STEP 4
