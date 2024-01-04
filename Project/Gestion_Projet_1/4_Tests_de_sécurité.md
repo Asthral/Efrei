@@ -20,7 +20,7 @@ Dans notre cas nous scannons notre réseau car nous somme en local, nous identif
 ## STEP 2
 ### Attaque Man In The Middle
 
-**Explication** : Nous allons faire une attaque MITM, concistant à espoinner le réseau, et voir les paquets important qui y passe, notamment les user:password etc...
+**Explication** : Nous allons faire une attaque MITM, consistant à espoinner le réseau, et voir les paquets important qui y passe, notamment les user:password etc...
 
 **Commande** : `sudo ettercap -T -q -i eth0`
 
@@ -42,9 +42,9 @@ Dans notre cas nous scannons notre réseau car nous somme en local, nous identif
 ## STEP 4
 ### Attaque brute force avec Hydra
 
-**Explication** : Pour finir, avec un test encore une fois très basique, Hydra, qui va tester chaque possibilités d'une liste que nous lui donnons, afin qu'il les testes et trouve le mot de passe / nom d'utilisateur cherché.
+**Explication** : Pour finir, avec un test encore une fois très basique, Hydra, qui va tester chaque possibilité d'une liste que nous lui donnons, afin qu'il les teste et trouve le mot de passe / nom d'utilisateur cherché.
 
-/!\ j'ai créer un fichier avec le mot de passe pour montrer que ça fonctionne, mais Roo.123.oot n'est pas dans rockyou, et la wordlist probable fais 27Go...
+/!\ j'ai créé un fichier avec le mot de passe pour montrer que ça fonctionne, mais Roo.123.oot n'est pas dans rockyou, et la wordlist probable fais 27Go...
 
 **Commande** : `unzip /usr/share/wordlists/rockyou.tar.gz -d Desktop/`
 
@@ -52,4 +52,4 @@ Dans notre cas nous scannons notre réseau car nous somme en local, nous identif
 
 ![Kali_4_HydraBruteForce](https://github.com/Asthral/Efrei/assets/151788916/94586ab1-6c94-477f-a9b5-8582738d788a)
 
-**Solution** : limiter les accès à distance, et exigé un mot de passe compliquer n'étant pas dans des Wordlists de base.
+**Solution** : limiter les accès à distance, et exiger un mot de passe compliqué n'étant pas dans des Wordlists de base.
