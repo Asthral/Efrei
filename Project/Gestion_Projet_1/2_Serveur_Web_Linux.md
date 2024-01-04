@@ -60,7 +60,13 @@ En commençant pas installer tout le nécessaire :
 ## STEP 4
 ### Sécurisé l'accès en https
 
+**explication** : On commence par créer une clé ssl, avec un certificat .der ou .crt que l'on converti en .pem (la clé rsa) qui est public ou privée, comencant par ----BEGIN PUBLIC/PRIVATE RSA KEY----- et ------END PUBLIC/PRIVATE KEY RSA----
 
+**Commande** : sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+
+**Commande** : sudo openssl dhparam -out /etc/apache2/dhparam.pem 4096
+
+![Debian_4_SSLKeyCreate](https://github.com/Asthral/Efrei/assets/151788916/b52a787a-f221-4dee-8995-43615b602f6a)
 
 ---------------------------------------------------------------------------------------------
 ## STEP 5
