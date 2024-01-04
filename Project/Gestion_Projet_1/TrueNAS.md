@@ -5,7 +5,7 @@
 ## STEP 1
 ### Confgue TrueNAS, finalisation
 
-**Explication** : Nous allons donc créer et configuré un serveur truenas depuis son iso, avec une configuration normal, pour en arriver jusque la : 
+**Explication** : Nous allons donc créer et configuré un serveur truenas depuis son iso, avec une configuration normal, afin d'obtenir son ip de connection, pour en arriver jusque la : 
 
 ![TrueNAS_1_FinishConfigue](https://github.com/Asthral/Efrei/assets/151788916/6c991957-1eb5-4909-8a85-e38ce0d420c2)
 
@@ -21,7 +21,7 @@
 ## STEP 3
 ### Ajout des disques
 
-**Explication** : Nous allons créer et ajouter un disque sur VMware pour truenas afin de débuter le Raid Miroir
+**Explication** : Nous allons créer et ajouter un disque sur VMware pour truenas afin de débuter le Raid Miroir, car il est nécessaire d'avoir plusieurs disques (si l'un est perdu, l'autre peut-donc prendre la relève), il existe plusieurs type de Raid mais nous allons rester sur celui-ci.
 
 ![TrueNAS_DisqueSTockage](https://github.com/Asthral/Efrei/assets/151788916/a7561b5b-5e6f-46f7-85a2-d25d28edc1db)
 
@@ -29,13 +29,13 @@
 ## STEP 4
 ### Création Pool, Dataset + Permission, ACL
 
-**Explication** : Création d'un pool via TrueNas avec les différentes configurations à faire (permission, DataSet, Groupe etc...)
+**Explication** : Création d'un pool via TrueNas avec les différentes configurations à faire (permission, DataSet, Groupe, ACL etc...)
 
-Ajout du disque : 
+Ajout du disque dur (20Go) : 
 
 ![TrueNAS_4_ConfiguePool](https://github.com/Asthral/Efrei/assets/151788916/048f4e07-df8a-42d6-b1c0-1a92072a92f5)
 
-Création des DataSet :
+Création des DataSet (chaque utilisateur), j'ai pris les noms de mes camarades :
 
 ![TrueNAS_4_AddDataSet](https://github.com/Asthral/Efrei/assets/151788916/fe4dc794-0c62-48df-acba-7e6257827352)
 
@@ -57,7 +57,7 @@ Gestion de permissions ACL 2 :
 
 **Explication** : Nous allons faire un partage de dossier à distance, tout comme le fais windows en NFS, nous allons le faire en SMB sur kali (problème windows), en commencant par la création d'utilisateur, puis l'ajout des dossiers et enfin la connection aux dossiers.
 
-Add User : 
+Ajouts des utilisateurs pouvans se connecter : 
 
 ![TrueNAS_5_CreateUser](https://github.com/Asthral/Efrei/assets/151788916/7bc436be-88d8-4aff-90e9-e3a2cd0d9727)
 
@@ -71,7 +71,7 @@ Sur kali :
 
 ![TrueNAS_Devinette](https://github.com/Asthral/Efrei/assets/151788916/ce04f941-0512-4115-8acb-4732b65ae4a1)
 
-Nous pouvons créer ajouter changer des dossiers / fichiers depuis l'utilisateur erwan créé précédemment
+Nous pouvons créer ajouter changer des dossiers / fichiers depuis l'utilisateur erwan créé précédemment, pour accedé entre autre à son espace de stockage privée.
 
 ### AD
 
