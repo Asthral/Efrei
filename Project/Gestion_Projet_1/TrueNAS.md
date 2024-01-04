@@ -69,7 +69,7 @@ ajout de fichier accessible par SMB :
 
 Sur kali : 
 
-![TrueNAS_Devinette](https://github.com/Asthral/Efrei/assets/151788916/607f3585-7244-4e7f-9925-96cbafd19661)
+![TrueNAS_Devinette](https://github.com/Asthral/Efrei/assets/151788916/ce04f941-0512-4115-8acb-4732b65ae4a1)
 
 Nous pouvons créer ajouter changer des dossiers / fichiers depuis l'utilisateur erwan créé précédemment
 
