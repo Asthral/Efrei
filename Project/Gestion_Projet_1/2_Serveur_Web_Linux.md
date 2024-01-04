@@ -4,7 +4,9 @@
 ## STEP 1
 ### Installation du serveur
 
-**Explication** : Nous allons télécharger une iso de debian 11, et configurer notre VM, afin de pouvoir configurer le serveur, et pouvoir le lancer
+**Explication** : Nous allons télécharger une iso de debian 11, et configurer notre VM, et arriver ici : 
+
+![Capture d'écran 2024-01-04 220052](https://github.com/Asthral/Efrei/assets/151788916/fa4a66af-13af-4bd4-a372-b2028f5cc227)
 
 ---------------------------------------------------------------------------------------------
 ## STEP 2
