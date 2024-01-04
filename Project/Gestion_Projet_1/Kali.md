@@ -14,6 +14,8 @@ Dans notre cas nous scannons notre réseau car nous somme en local, nous identif
 
 ![Kali_1_Nmap](https://github.com/Asthral/Efrei/assets/151788916/3df156d7-f3c8-4656-9bf9-90a9dd453d49)
 
+**Solution** : limiter l'accès au réseau local
+
 ---------------------------------------------------------------------------------------------
 ## STEP 2
 ### Ettercap, spoofing
@@ -24,6 +26,8 @@ Dans notre cas nous scannons notre réseau car nous somme en local, nous identif
 
 ![Kali_2_MITMettercap](https://github.com/Asthral/Efrei/assets/151788916/e65ec558-e145-4a87-ab05-fb2fb2bc50da)
 
+**Solution** : Chiffré les paquets afin que les données récupérés par un pirate soit illisible et indéchiffrable (AES, RSA etc...) 
+
 ---------------------------------------------------------------------------------------------
 ## STEP 3
 ### DDOS
@@ -31,6 +35,8 @@ Dans notre cas nous scannons notre réseau car nous somme en local, nous identif
 **Explication** : Nous allons pour cette fois DDOS le serveur, avec un tool appelé Slowloris, qui va envoyer un multitide de paquets, afin de faire déborder le serveur qui va ensuite crasher. (dans notre cas nous avions une session mais la page ne se recharge plus)
 
 ![Kali_3_SlowlorisDDOS](https://github.com/Asthral/Efrei/assets/151788916/56410e22-47ba-46a5-9e63-5ef3c09ba240)
+
+**Solution** : Demander un certificat, une ip / une adresse MAC, et bloquer les paquets à un nombre d'envoie précis, afin de limiter les DDOS, / DDOS rotation d'ip, certif etc...)
 
 ---------------------------------------------------------------------------------------------
 ## STEP 4
@@ -46,3 +52,4 @@ Dans notre cas nous scannons notre réseau car nous somme en local, nous identif
 
 ![Kali_4_HydraBruteForce](https://github.com/Asthral/Efrei/assets/151788916/94586ab1-6c94-477f-a9b5-8582738d788a)
 
+**Solution** : limiter les accès à distance, et exigé un mot de passe compliquer n'étant pas dans des Wordlists de base.
