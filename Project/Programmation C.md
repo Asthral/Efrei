@@ -1,0 +1,125 @@
+```c
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// Structure d'un noeud de la liste chaînée
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// Fonction pour afficher la liste
+void display_list(struct Node* head) {
+    struct Node* current = head;
+    if (current == NULL) {
+        printf("La liste est vide.\n");
+        return;
+    }
+    printf("Liste : ");
+    while (current != NULL) {
+        printf("%d -> ", current->data);
+        current = current->next;
+    }
+    printf("NULL\n");
+}
+
+// Fonction pour réinitialiser la liste
+void reset_list(struct Node** head) {
+    struct Node* current = *head;
+    struct Node* next;
+    while (current != NULL) {
+        next = current->next;
+        free(current);
+        current = next;
+    }
+    *head = NULL;
+    printf("La liste a été réinitialisée.\n");
+}
+
+// Fonction pour ajouter un élément à la fin de la liste
+void add_end(struct Node** head, int data) {
+    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+    new_node->data = data;
+    new_node->next = NULL;
+
+    if (*head == NULL) {
+        *head = new_node;
+        printf("Élément '%d' ajouté à la fin de la liste.\n", data);
+        return;
+    }
+
+    struct Node* last = *head;
+    while (last->next != NULL) {
+        last = last->next;
+    }
+    last->next = new_node;
+    printf("Élément '%d' ajouté à la fin de la liste.\n", data);
+}
+
+// Fonction pour supprimer un élément à la fin de la liste
+void remove_end(struct Node** head) {
+    if (*head == NULL) {
+        printf("La liste est vide, aucune suppression possible.\n");
+        return;
+    }
+
+    if ((*head)->next == NULL) {
+        free(*head);
+        *head = NULL;
+        printf("Élément supprimé de la fin de la liste.\n");
+        return;
+    }
+
+    struct Node* current = *head;
+    struct Node* previous = NULL;
+    while (current->next != NULL) {
+        previous = current;
+        current = current->next;
+    }
+    free(current);
+    previous->next = NULL;
+    printf("Élément supprimé de la fin de la liste.\n");
+}
+
+// Fonction principale (main)
+int main() {
+    struct Node* head = NULL;
+    int choice, data;
+
+    while (1) {
+        printf("\nBonjour, opération à effectuer :\n");
+        printf("1 - Afficher\n");
+        printf("2 - Réinitialiser\n");
+        printf("3 - Ajouter un élément à la fin de la liste\n");
+        printf("4 - Supprimer un élément à la fin de la liste\n");
+        printf("5 - Quitter le programme\n");
+        printf("Opération : ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                display_list(head);
+                break;
+            case 2:
+                reset_list(&head);
+                break;
+            case 3:
+                printf("Entrez l'élément à ajouter : ");
+                scanf("%d", &data);
+                add_end(&head, data);
+                break;
+            case 4:
+                remove_end(&head);
+                break;
+            case 5:
+                printf("Fin du programme.\n");
+                exit(0);
+            default:
+                printf("Choix invalide, veuillez réessayer.\n");
+        }
+    }
+
+    return 0;
+}
+```
