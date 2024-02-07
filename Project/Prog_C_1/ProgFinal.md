@@ -3,13 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Structure d'un noeud de la liste chaînée
 struct Node {
     int data;
     struct Node* next;
 };
 
-// Fonction pour afficher la liste
 void display_list(struct Node* head) {
     struct Node* current = head;
     if (current == NULL) {
@@ -24,7 +22,6 @@ void display_list(struct Node* head) {
     printf("NULL\n");
 }
 
-// Fonction pour réinitialiser la liste
 void reset_list(struct Node** head) {
     struct Node* current = *head;
     struct Node* next;
@@ -37,7 +34,6 @@ void reset_list(struct Node** head) {
     printf("La liste a été réinitialisée.\n");
 }
 
-// Fonction pour ajouter un élément à la fin de la liste
 void add_end(struct Node** head, int data) {
     struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
     new_node->data = data;
@@ -57,7 +53,6 @@ void add_end(struct Node** head, int data) {
     printf("Élément '%d' ajouté à la fin de la liste.\n", data);
 }
 
-// Fonction pour supprimer un élément à la fin de la liste
 void remove_end(struct Node** head) {
     if (*head == NULL) {
         printf("La liste est vide, aucune suppression possible.\n");
@@ -82,7 +77,6 @@ void remove_end(struct Node** head) {
     printf("Élément supprimé de la fin de la liste.\n");
 }
 
-// Fonction principale (main)
 int main() {
     struct Node* head = NULL;
     int choice, data;
