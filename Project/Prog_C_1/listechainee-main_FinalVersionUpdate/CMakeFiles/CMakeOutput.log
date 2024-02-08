@@ -7,13 +7,12 @@ Id flags:
 The output was:
 0
 
-
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/ssor/cdev/listechainee/CMakeFiles/3.25.1/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/Asthral/cdev/listechainee/CMakeFiles/3.25.1/CompilerIdC/a.out"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/ssor/cdev/listechainee/CMakeFiles/CMakeScratch/TryCompile-wGsPfi
+Change Dir: /home/Asthral/cdev/listechainee/CMakeFiles/CMakeScratch/TryCompile-wGsPfi
 
 Run Build Command(s):/usr/bin/ninja cmTC_d8bd8 && [1/2] Building C object CMakeFiles/cmTC_d8bd8.dir/CMakeCCompilerABI.c.o
 Using built-in specs.
@@ -90,7 +89,7 @@ Parsed C implicit include dir info from above output: rv=done
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/ssor/cdev/listechainee/CMakeFiles/CMakeScratch/TryCompile-wGsPfi]
+  ignore line: [Change Dir: /home/Asthral/cdev/listechainee/CMakeFiles/CMakeScratch/TryCompile-wGsPfi]
   ignore line: []
   ignore line: [Run Build Command(s):/usr/bin/ninja cmTC_d8bd8 && [1/2] Building C object CMakeFiles/cmTC_d8bd8.dir/CMakeCCompilerABI.c.o]
   ignore line: [Using built-in specs.]
