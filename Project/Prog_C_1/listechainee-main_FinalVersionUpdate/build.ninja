@@ -34,7 +34,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/ssor/cdev/listechainee/
+cmake_ninja_workdir = /home/Asthral/cdev/listechainee/
 # =============================================================================
 # Object build statements for EXECUTABLE target exec
 
@@ -44,15 +44,15 @@ cmake_ninja_workdir = /home/ssor/cdev/listechainee/
 
 build cmake_object_order_depends_target_exec: phony || CMakeFiles/exec.dir
 
-build CMakeFiles/exec.dir/src/list.c.o: C_COMPILER__exec_ /home/ssor/cdev/listechainee/src/list.c || cmake_object_order_depends_target_exec
+build CMakeFiles/exec.dir/src/list.c.o: C_COMPILER__exec_ /home/Asthral/cdev/listechainee/src/list.c || cmake_object_order_depends_target_exec
   DEP_FILE = CMakeFiles/exec.dir/src/list.c.o.d
-  INCLUDES = -I/home/ssor/cdev/listechainee
+  INCLUDES = -I/home/Asthral/cdev/listechainee
   OBJECT_DIR = CMakeFiles/exec.dir
   OBJECT_FILE_DIR = CMakeFiles/exec.dir/src
 
-build CMakeFiles/exec.dir/test/test.c.o: C_COMPILER__exec_ /home/ssor/cdev/listechainee/test/test.c || cmake_object_order_depends_target_exec
+build CMakeFiles/exec.dir/test/test.c.o: C_COMPILER__exec_ /home/Asthral/cdev/listechainee/test/test.c || cmake_object_order_depends_target_exec
   DEP_FILE = CMakeFiles/exec.dir/test/test.c.o.d
-  INCLUDES = -I/home/ssor/cdev/listechainee
+  INCLUDES = -I/home/Asthral/cdev/listechainee
   OBJECT_DIR = CMakeFiles/exec.dir
   OBJECT_FILE_DIR = CMakeFiles/exec.dir/test
 
@@ -76,7 +76,7 @@ build exec: C_EXECUTABLE_LINKER__exec_ CMakeFiles/exec.dir/src/list.c.o CMakeFil
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ssor/cdev/listechainee && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/Asthral/cdev/listechainee && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -87,7 +87,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ssor/cdev/listechainee && /usr/bin/cmake --regenerate-during-build -S/home/ssor/cdev/listechainee -B/home/ssor/cdev/listechainee
+  COMMAND = cd /home/Asthral/cdev/listechainee && /usr/bin/cmake --regenerate-during-build -S/home/Asthral/cdev/listechainee -B/home/Asthral/cdev/listechainee
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -103,7 +103,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /home/ssor/cdev/listechainee
+# Folder: /home/Asthral/cdev/listechainee
 
 build all: phony exec
 
