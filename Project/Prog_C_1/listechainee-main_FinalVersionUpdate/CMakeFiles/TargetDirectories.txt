@@ -1,0 +1,3 @@
+/home/ssor/cdev/listechainee/CMakeFiles/exec.dir
+/home/ssor/cdev/listechainee/CMakeFiles/edit_cache.dir
+/home/ssor/cdev/listechainee/CMakeFiles/rebuild_cache.dir
