@@ -12,3 +12,6 @@ les sous partie de tableau sont organisés ainsi :
 `Step "nombre"` 
 
 `"Nom sous partie"`
+
+
+<img width="892" alt="image" src="https://github.com/Asthral/Efrei/assets/151788916/3b54edac-fcf2-49fc-a125-7630504c6214">
