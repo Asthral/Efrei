@@ -31,7 +31,7 @@ void reset_list(struct Node** head) {
         current = next;
     }
     *head = NULL;
-    printf("La liste a été réinitialisée.\n");
+    printf("Liste réinitialisée.\n");
 }
 
 void add_end(struct Node** head, int data) {
@@ -41,7 +41,7 @@ void add_end(struct Node** head, int data) {
 
     if (*head == NULL) {
         *head = new_node;
-        printf("Élément '%d' ajouté à la fin de la liste.\n", data);
+        printf("Élément '%d' ajouté en fin de liste.\n", data);
         return;
     }
 
@@ -50,12 +50,12 @@ void add_end(struct Node** head, int data) {
         last = last->next;
     }
     last->next = new_node;
-    printf("Élément '%d' ajouté à la fin de la liste.\n", data);
+    printf("Élément '%d' ajouté en fin de liste.\n", data);
 }
 
 void remove_end(struct Node** head) {
     if (*head == NULL) {
-        printf("La liste est vide, aucune suppression possible.\n");
+        printf("Pas possible.\n");
         return;
     }
 
@@ -99,7 +99,7 @@ int main() {
                 reset_list(&head);
                 break;
             case 3:
-                printf("Entrez l'élément à ajouter : ");
+                printf("élément à ajouter : ");
                 scanf("%d", &data);
                 add_end(&head, data);
                 break;
@@ -107,10 +107,10 @@ int main() {
                 remove_end(&head);
                 break;
             case 5:
-                printf("Fin du programme.\n");
+                printf("Fin du prog.\n");
                 exit(0);
             default:
-                printf("Choix invalide, veuillez réessayer.\n");
+                printf("Choix invalide.\n");
         }
     }
 
