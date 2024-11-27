@@ -2,13 +2,11 @@
                 xmlns:php="http://php.net/xsl" version="1.0">
     <xsl:template match="/">
         <xsl:text>=== Listing local files in allowed directory ===&#10;</xsl:text>
-        <!-- Lister les fichiers avec scandir -->
         <xsl:for-each select="php:function('scandir', '/challenge/web-serveur/ch50')">
             <xsl:value-of select="." />
             <xsl:text>&#10;</xsl:text>
         </xsl:for-each>
         <xsl:text>=== Test document() ===&#10;</xsl:text>
-        <!-- Test avec document pour lire un fichier XML -->
         <xsl:variable name="test" select="document('example.xml')" />
         <xsl:value-of select="$test" />
     </xsl:template>
