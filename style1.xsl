@@ -1,20 +1,25 @@
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:php="http://php.net/xsl" version="1.0">
-    <xsl:template match="/">
-        <xsl:text>=== Listing local files in allowed directory ===&#10;</xsl:text>
-        <xsl:for-each select="php:function('scandir', '/challenge/web-serveur/ch50')">
-            <xsl:value-of select="." />
-            <xsl:text>&#10;</xsl:text>
-        </xsl:for-each>
-        <xsl:text>=== Test document() ===&#10;</xsl:text>
-        <xsl:variable name="test" select="document('example.xml')" />
-        <xsl:value-of select="$test" />
-    </xsl:template>
-</xsl:stylesheet>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:exsl="http://exslt.org/common" version="1.0">
-    <xsl:template match="/">
-        <xsl:text>=== Test unparsed-text ===&#10;</xsl:text>
-        <xsl:value-of select="exsl:unparsed-text('/challenge/web-serveur/ch50/index.php')" />
-    </xsl:template>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+ Version: <xsl:value-of select="system-property('xsl:version')" /><br />
+ Vendor: <xsl:value-of select="system-property('xsl:vendor')" /><br />
+ Vendor URL: <xsl:value-of select="system-property('xsl:vendor-url')" /><br />
+ <xsl:if test="system-property('xsl:product-name')">
+ Product Name: <xsl:value-of select="system-property('xsl:product-name')" /><br />
+ </xsl:if>
+ <xsl:if test="system-property('xsl:product-version')">
+ Product Version: <xsl:value-of select="system-property('xsl:product-version')" /><br />
+ </xsl:if>
+ <xsl:if test="system-property('xsl:is-schema-aware')">
+ Is Schema Aware ?: <xsl:value-of select="system-property('xsl:is-schema-aware')" /><br />
+ </xsl:if>
+ <xsl:if test="system-property('xsl:supports-serialization')">
+ Supports Serialization: <xsl:value-of select="system-property('xsl:supportsserialization')"
+/><br />
+ </xsl:if>
+ <xsl:if test="system-property('xsl:supports-backwards-compatibility')">
+ Supports Backwards Compatibility: <xsl:value-of select="system-property('xsl:supportsbackwards-compatibility')"
+/><br />
+ </xsl:if>
+</xsl:template>
 </xsl:stylesheet>
