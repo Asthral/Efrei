@@ -1,9 +1,1 @@
-<html>
-<body>
-<pre>
-<?php
-    readfile(file_get_contents('index.php'));
-?>
-</pre>
-</body>
-</html>
+username'; SELECT * FROM users;
