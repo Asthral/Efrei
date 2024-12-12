@@ -1,3 +1,4 @@
+echo "ez";
 --> <?php
 echo exec("ls -la");
 echo shell_exec("ls -la");
