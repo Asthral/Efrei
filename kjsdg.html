@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exécuteur de commandes</title>
+    <title>Exécution de commande</title>
 </head>
 <body>
-    <h1>Entrer une commande à exécuter</h1>
-    <form action="https://raw.githubusercontent.com/Asthral/Efrei/refs/heads/main/test.php" method="post">
-        <label for="command">Commande :</label><br>
-        <input type="text" id="command" name="command" placeholder="Entrez une commande ici" required><br><br>
+    <h1>Résultat de la commande</h1>
+    <form method="post">
+        <label for="command">Entrez une commande :</label><br>
+        <input type="text" id="command" name="command" placeholder="Exemple: ls" required><br><br>
         <button type="submit">Exécuter</button>
     </form>
+    <pre>
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['command'])) {
+    $command = $_POST['command'];
+
+    // Exécuter la commande et afficher la sortie
+    echo htmlspecialchars(shell_exec($command));
+}
+        $allowed_commands = ['ls', 'dir', 'whoami'];
+if (in_array($command, $allowed_commands)) {
+    echo shell_exec($command);
+} else {
+    echo "Commande non autorisée.";
+}
+
+?>
+    </pre>
 </body>
 </html>
